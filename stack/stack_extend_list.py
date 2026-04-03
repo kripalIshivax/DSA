@@ -5,9 +5,10 @@ class Stack(list):
 
     def push(self, item):
         super().append(item)
-
-    def pop(self):
-        super().pop()
+        
+    #it already exist in parent class so why create it.
+    # def pop(self): 
+    #     super().pop()
 
     def peek(self):
         length = len(self)
@@ -25,6 +26,10 @@ class Stack(list):
         else:
             True
 
+    def append(self, item):
+        raise Exception("This method is not allowed!")
+
+
 
 stack = Stack()
 stack.push(1)
@@ -33,3 +38,4 @@ stack.push(3)
 stack.pop()
 stack.is_empty()
 stack.size()
+stack.append(2)
