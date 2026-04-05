@@ -39,6 +39,11 @@ class SinglyLinkedList:
         if self.last is None:
             self.last = new_node
 
+    def delete_from_start(self):
+        self.head = self.head.next
+        if self.head is None:
+            raise IndexError("empty")        
+
     # Delete by value
     def delete(self, value):
         temp = self.head
@@ -85,12 +90,12 @@ s1.insert(23)
 print("List:")
 s1.print_list()
 
-print("Search 44:", s1.search(44))
+# print("Search 44:", s1.search(44))
 
-s1.delete(14)
-print("After deleting 14:")
-s1.print_list()
+# s1.delete(14)
+# print("After deleting 14:")
+# s1.print_list()
 
-s1.insert_at_start(5)
-print("After inserting at start:")
-s1.print_list()
+# s1.insert_at_start(5)
+# print("After inserting at start:")
+# s1.print_list()
