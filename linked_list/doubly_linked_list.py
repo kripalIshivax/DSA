@@ -17,4 +17,20 @@ class DoublyLinkedList:
             else:
                 newNode = Node(temp,val,None)
                 temp.next = newNode
+    def printList(self):
+         temp = self.head
+         while temp.next is not None:
+             print(temp.val)
+             temp = temp.next
+         else:
+             print(temp.val)
 
+    def insert_at_start(self,val):
+        newNode = Node(None,val,self.head)
+
+d = DoublyLinkedList()
+d.insert(10)
+d.insert(20)
+d.insert(30)
+d.insert(40)
+d.printList()
