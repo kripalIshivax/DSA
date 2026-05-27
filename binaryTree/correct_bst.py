@@ -16,5 +16,4 @@ class BST:
             root.left =  self.re_insert(item,root.left)
         elif item > root.item:
             root.right = self.re_insert(item,root.right)
-        else:
-            return
+        return
