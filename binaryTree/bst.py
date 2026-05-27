@@ -46,13 +46,27 @@ class BST:
 
     def call_printBst(self):
         self.printBst(self.root)
-    def in_order_trev(self,temp):
+    
+
+    def inOrderTrev(self,temp):
         if temp is None:
             return
-        if temp.left is None and temp.right is None:
+        
+        if temp.left is not None:
+            self.inOrderTrev(temp.left)
+            print("left",temp.item)
+        elif temp.right is not None:    
+            self.inOrderTrev(temp.right)
+            print("right",temp.item)
+        else:
+            print("center",temp.item)
             return
-        if temp.right is None:
-            self.in_order_trev
+             
+    def callInOrdTrev(self):
+        self.inOrderTrev(self.root)
+
+
+
 bst = BST()
 bst.call_insert(100)
 bst.call_insert(99)
@@ -61,6 +75,7 @@ bst.call_insert(102)
 bst.call_insert(332)
 bst.call_insert(3)
 bst.call_insert(4)
-bst.call_printBst()
+#bst.call_printBst()
+bst.callInOrdTrev()
 
 
