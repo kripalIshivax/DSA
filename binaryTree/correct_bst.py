@@ -17,3 +17,19 @@ class BST:
         elif item > root.item:
             root.right = self.re_insert(item,root.right)
         return
+    def search(self,item):
+        self.re_search(self.root,item)
+    def re_search(self, root , item):
+        if root is None or root.item == item:
+            return root
+        if data < root.item:
+            return self.re_search(root.left,item)
+        else:
+            return self.re_search(root.right,item)
+    def in_order_trev(self):
+        self.io_trev(self,self.root):
+    def io_trev(self,root):
+        if root is None:
+            return
+
+
